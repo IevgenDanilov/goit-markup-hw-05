@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
@@ -54,7 +55,8 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-                    <button type="button" class="button primary">Заказать услугу</button>
+                    <button class="button primary" data-modal-open type="button">Заказать
+                        услугу</button>
                 </div>
             </div>
         </section>
@@ -106,12 +108,21 @@
                 <ul class="list services-list">
                     <li class="services-list-item">
                         <img src="./images/computer.jpg" alt="Компьютер" width="370" />
+                        <div class="services-list-item-lable">
+                            <h2 class="services-list-item-title">Десктопные приложения</h2>
+                        </div>
                     </li>
                     <li class="services-list-item">
                         <img src="./images/telephone.jpg" alt="Телефон" width="370" />
+                        <div class="services-list-item-lable">
+                            <h2 class="services-list-item-title">Мобильные приложения</h2>
+                        </div>
                     </li>
                     <li class="services-list-item">
                         <img src="./images/tablet.jpg" alt="Планшет" width="370" />
+                        <div class="services-list-item-lable">
+                            <h2 class="services-list-item-title">Дизайнерские решения</h2>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -390,6 +401,17 @@
         </div>
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-btn" data-modal-close>
+                <svg width="11" height="11">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
